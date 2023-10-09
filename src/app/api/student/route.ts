@@ -36,10 +36,10 @@ export const POST = async (request: NextRequest) => {
   //4. Add new Student data
   // await prisma...
 
-  // return NextResponse.json<StudentPostErrorResponse>(
-  //   { ok: false, message: "Student Id already exists" },
-  //   { status: 400 }
-  // );
+  return NextResponse.json<StudentPostErrorResponse>(
+    { ok: false, message: "Student Id already exists" },
+    { status: 400 }
+  );
 
   // return NextResponse.json<StudentPostOKResponse>({ ok: true });
 };
